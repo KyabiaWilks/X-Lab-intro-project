@@ -1,0 +1,230 @@
+/* 基本设置 */
+html, body {
+    width: 100vw;
+    height: 100vh;
+    /* 设置页面高度为视口高度 */
+    margin: 0;
+    padding: 0;
+    /* 设置最小高度为视口高度 */
+    background-color: #f4f6fb;
+    /* 背景颜色 */
+    background-color: rgba(245, 250, 255, 1);
+    /* 背景颜色（RGBA） */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    /* 字体设置 */
+}
+
+.root {
+    display: flex; /* 启用 Flex 布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: center; /* 垂直居中对齐 */
+    align-items: center; /* 水平居中对齐 */
+    height: 100vh; /* 设置高度为全屏 */
+    margin: 0; /* 清除默认边距 */
+    padding: 0; /* 清除默认内边距 */
+}
+
+button {
+    outline: none;
+    /* 移除按钮焦点的轮廓 */
+    background: none;
+    /* 移除按钮背景 */
+    border: none;
+    /* 移除按钮边框 */
+}
+
+/* 应用容器样式 */
+.app {
+    display: flex;
+    /* 使用 flexbox 布局 */
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    /* 垂直方向排列 */
+    flex: 1;
+    /* 使容器填满可用空间 */
+    justify-content: flex-start;
+    /* 子元素从容器顶部开始排列 */
+    align-items: center;
+    /* 子元素水平居中 */
+    background-color: #f4f6fb;
+    /* 背景颜色 */
+    background-color: rgba(245, 250, 255, 1);
+    /* 背景颜色（RGBA） */
+    margin: 0 0 0 30px;
+}
+
+/* 头像列表样式 */
+.avatar_list {
+    display: flex;
+    /* 使用 flexbox 布局 */
+    flex-direction: row;
+    /* 水平方向排列 */
+    justify-content: space-around;
+    /* 子元素水平分布 */
+    flex-wrap: wrap;
+    /* 允许换行 */
+}
+
+/* 活动头像样式 */
+.active_avatar {
+    border: 5px solid #1ecdc5;
+    /* 边框颜色 */
+}
+
+/* 头像图片样式 */
+.avatar_image {
+    width: 60px;
+    /* 宽度 */
+    height: 60px;
+    /* 高度 */
+    border-radius: 30px;
+    /* 圆形 */
+    /* border: 5px solid #1ecdc5; */
+    /* 取消边框 */
+}
+
+/* 聊天应用样式 */
+.chat_app {
+    display: flex;
+    /* 使用 flexbox 布局 */
+    flex-direction: row;
+    /* 水平方向排列 */
+    justify-content: center;
+    /* 水平居中 */
+    margin: 40px;
+    /* 外边距 */
+    width: 90%;
+    /* 宽度 */
+    background-color: #fff;
+    /* 背景颜色 */
+    box-shadow: 0px 10px 20px rgba(113, 113, 113, 0.1);
+    /* 阴影效果 */
+    border-radius: 15px;
+    /* 圆角 */
+    height: 90vh;
+    /* 高度 */
+}
+
+/* Modal.css */
+.modal-overlay {
+    position: fixed; /* 固定定位 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    display: flex; /* 使用 flexbox 对齐内容 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    z-index: 1000; /* 确保在其他元素之上 */
+  }
+  
+  .modal-content {
+    background: white; /* 弹窗背景 */
+    padding: 25px; /* 内边距 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影 */
+    width: 250px; /* 弹窗宽度 */
+    height: 160px; /* 设置弹窗高度 */
+    display: flex; /* 使用 flexbox 对齐内容 */
+    flex-direction: column; /* 垂直排列内容 */
+    align-items: center; /* 水平居中内容 */
+  }
+
+  .modal-content-delete {
+    background: white; /* 弹窗背景 */
+    padding: 25px; /* 内边距 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影 */
+    width: 250px; /* 弹窗宽度 */
+    height: 140px; /* 设置弹窗高度 */
+    display: flex; /* 使用 flexbox 对齐内容 */
+    flex-direction: column; /* 垂直排列内容 */
+    align-items: center; /* 水平居中内容 */
+  }
+  
+  .modal-actions {
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between; /* 按钮间隔 */
+    width: 90%; /* 确保按钮占满弹窗宽度 */
+  }
+
+  .modal-actions-delete {
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between; /* 按钮间隔 */
+    width: 90%; /* 确保按钮占满弹窗宽度 */
+    margin: 20px; /* 上下外边距 */
+  }
+
+  .add_title {
+    color: rgb(0, 0, 0);
+    margin:0 10px;
+    /* 字体颜色 */
+}
+
+  /* 聊天输入框样式 */
+.add_input {
+    display: flex; /* 使用 flexbox 布局 */
+    /* flex-direction: row; /* 水平方向排列 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background-color: #000000; /* 背景颜色 */
+    color: #ffffff; /* 字体颜色 */
+    border-radius: 10px; /* 圆角 */
+    margin: 10px 0; /* 仅上下外边距 */
+    padding: 10px; /* 内边距 */
+    width: 80%; /* 填满弹窗宽度 */
+}
+
+/* 聊天输入框内部文本框样式 */
+.add_input input {
+    flex: 1;
+    /* 填满剩余空间 */
+    color: rgb(55, 65, 81);
+    /* 字体颜色 */
+    border: 1px solid #e2e5f1;
+    /* 边框颜色 */
+    border-radius: 10px;
+    /* 圆角 */
+    font-size: 14px;
+    /* 字体大小 */
+    padding: 10px;
+    /* 内边距 */
+    margin-right: 5px;
+    /* 右边距 */
+}
+
+.dropdown_menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #e2e5f1;
+    color: #000000;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    right: 0; /* 在右侧显示 */
+    top: 100%; /* 相对于 room_entry 的底部 */
+  }
+  
+  .dropdown_menu div {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown_menu div:hover {
+    background-color: #f4f6fb;
+  }
+  
+  .modal_button {
+    background-color: #1ecdc5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }

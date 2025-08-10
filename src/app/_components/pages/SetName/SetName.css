@@ -1,0 +1,111 @@
+/* SetName.css */
+
+/* 整体页面背景 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* 页面容器 */
+  .set-name-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* 标题 */
+  .set-name-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* 输入框 */
+  .set-name-input {
+    display: flex; /* 使用 flexbox 布局 */
+    /* flex-direction: row; /* 水平方向排列 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background-color: #000000; /* 背景颜色 */
+    color: rgb(255, 255, 255);
+    border-radius: 10px; /* 圆角 */
+    margin: 10px 0; /* 仅上下外边距 */
+    padding: 10px; /* 内边距 */
+    width: 80%; /* 填满弹窗宽度 */
+}
+
+/* 聊天输入框内部文本框样式 */
+.set-name-input input {
+    flex: 1;
+    /* 填满剩余空间 */
+    color: rgb(255, 255, 255);
+    /* 字体颜色 */
+    border: 1px solid #e2e5f1;
+    /* 边框颜色 */
+    border-radius: 10px;
+    /* 圆角 */
+    font-size: 14px;
+    /* 字体大小 */
+    padding: 10px;
+    /* 内边距 */
+    margin-right: 5px;
+    /* 右边距 */
+}
+  
+  .set-name-input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.3);
+  }
+  
+  /* 按钮 */
+  .set-name-button {
+    background: #191c20;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0px 50px 0 50px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .set-name-button:hover {
+    background: #2c3748;
+    transform: scale(1.05);
+  }
+  
+  .set-name-button:active {
+    background: #1b2027;
+  }
+
+  .register-button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .register-button:hover {
+    background: #2c3748;
+    transform: scale(1.05);
+  }
+  
+  .register-button:active {
+    background: #1b2027;
+  }
+  

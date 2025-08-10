@@ -1,0 +1,171 @@
+/* 左侧边栏样式 */
+.left_sidebar {
+    display: flex;
+    /* 使用 flexbox 布局 */
+    width: 300px;
+    /* 最小宽度 */
+    flex-direction: column;
+    /* 垂直方向排列 */
+    align-items: center;
+    /* 水平居中 */
+    /* background-color: tan; */
+    /* 背景颜色 */
+    padding: 10px 15px;
+    /* 内边距 */
+    border-radius: 10px 0 0 10px;
+    /* 右侧圆角 */
+}
+
+.left_head {
+    display: flex; /* 使用 Flexbox */
+    justify-content: space-between; /* 左右分散对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    padding: 0px; /* 添加内边距 */
+    background-color: #ffffff; /* 可选背景色 */
+    width: 100%; /* 设置为100%以与左侧边栏相同宽度 */
+}
+
+/* Logo 文本样式 */
+.logo_text {
+    margin: 0;
+    /* 外边距 */
+}
+
+.logo_text span {
+    font-size: 1.0rem;
+    /* 字体大小 */
+    font-weight: 600;
+    /* 字体粗细 */
+    color: rgb(55, 65, 81);
+    /* 字体颜色 */
+}
+
+.logo_text span.colored {
+    color: #1ecdc5;
+    /* 高亮颜色 */
+}
+
+.room_add {
+    margin-left: auto; /* 将添加按钮推到右侧 */
+}
+
+/* 活动房间列表样式 */
+.active_rooms_list {
+    display: flex;
+    /* 使用 flexbox 布局 */
+    flex-direction: column;
+    /* 垂直方向排列 */
+    flex: 100;
+    /* 填满剩余空间 */
+    width: 100%;
+    /* 宽度 */
+    overflow-y: auto;
+    /* 允许垂直滚动 */
+    padding: 10px;
+    /* 内边距 */
+}
+.active_rooms_list ul {
+    margin: 0; /* 去掉外边距 */
+    padding: 0; /* 去掉内边距 */
+    list-style-type: none; /* 去掉默认的列表样式 */
+}
+
+
+/* 房间添加图标容器样式 */
+.room_add_icon_holder {
+    display: flex;
+    /* 使用 flexbox 布局 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    cursor: pointer;
+    /* 鼠标悬停效果 */
+    background-color: #1ecdc5;
+    /* 背景颜色 */
+    border-radius: 4px;
+    /* 圆角 */
+    padding: 0px 5px;
+    /* 内边距 */
+    color: #fff;
+    /* 字体颜色 */
+    font-weight: 500;
+    /* 字体粗细 */
+    font-size: 24px;
+    /* 字体大小 */
+}
+
+.room_entry {
+    background-color: #f4f6fb;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; /* 使房间名和发送时间在两侧 */
+    align-items: center;
+    transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+.room_entry_content {
+    display: flex;
+    flex-direction: column; /* 垂直排列房间名和最后一条信息 */
+    flex-grow: 1; /* 使内容部分占据剩余空间 */
+    margin-right: 20px; /* 增加右边距以避免与发送时间重叠 */
+    align-items: flex-start; /* 右对齐房间名和最后一条信息 */
+
+    max-width: calc(100% - 60px); /* 防止文本重叠头像和时间 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.room_name {
+    font-weight: bold;
+    color: #333;
+
+    margin-bottom: 0.2rem;
+    /* 下边距 */
+    max-width: 90%; /* 用户发言最大宽度 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.last_message {
+    color: #666;
+    font-size: 0.85rem; /* 可选：调整最后一条信息的字体大小 */
+    max-width: 90%; /* 用户发言最大宽度 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.last_message_time {
+    flex-shrink: 0; /* 时间部分不缩小 */
+    color: #999; /* 发送时间颜色 */
+    font-size: 0.8rem; /* 可选：调整发送时间的字体大小 */
+}
+
+/* 鼠标悬停时变色和图标升起效果 */
+.room_entry:hover {
+    transform: translateY(-5px); /* 向上移动5px */
+    background-color: #e1e1e1; /* 悬停时的背景色 */
+}
+
+/* 头像样式 */
+.room_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #87d1ff; /* 圆形头像背景色 */
+    margin-right: 10px;
+    transition: transform 0.3s; /* 添加过渡效果 */
+    object-fit: cover; /* 确保头像不变形 */
+    overflow: hidden;
+    display: inline-block;
+    flex-shrink: 0; /* 防止头像缩小 */
+}
+
+/* 鼠标悬停时图标升起效果 */
+.room_entry:hover .room_avatar {
+    transform: translateY(-5px); /* 向上移动5px */
+}

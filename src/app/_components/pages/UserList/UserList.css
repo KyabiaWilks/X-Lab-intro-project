@@ -1,0 +1,76 @@
+/* UserList.css */
+
+/* 整体页面背景 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Arial', sans-serif;
+}
+
+/* 用户列表容器 */
+.user-list-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* 标题 */
+.user-list-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* 用户列表 */
+.user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-list-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 用户信息 */
+.user-info {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 操作按钮 */
+.user-list-button {
+    background: #191c20;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.user-list-button:hover {
+    background: #2c3748;
+    transform: scale(1.05);
+}
+
+.user-list-button:active {
+    background: #1b2027;
+}
