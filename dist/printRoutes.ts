@@ -1,5 +1,5 @@
 // scripts/printRoutes.ts
-import { appRouter } from "c:/demo/chatroom/src/server/api/root";
+import { appRouter } from "E:/cback/demo/X-Lab-intro-project/src/server/api/root";
 import { AnyRouter } from "@trpc/server";
 
 function printRoutes(router: AnyRouter, prefix = ''): void {

@@ -1,29 +1,90 @@
-# Create T3 App
+# Chatroom 项目
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## 项目简介
 
-## What's next? How do I make an app with this?
+X-Lab入门项目进阶2024版个人完成情况归档。
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+基于 Next.js + tRPC + Drizzle ORM 的聊天室项目，使用 PostgreSQL 作为数据库，管理聊天、用户等数据。
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+---
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## 环境要求
 
-## Learn More
+- Node.js (推荐版本 18+，请自行安装)
+- Yarn 包管理器 v1.22.22 （项目指定版本）
+- PostgreSQL 数据库（建议使用 12 及以上版本）
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+---
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## 环境配置
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+1. 克隆项目代码到本地：
 
-## How do I deploy this?
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+2. 安装依赖：
+
+```bash
+yarn install
+```
+
+3. 配置环境变量
+
+在项目根目录创建 .env 文件，参考.env.example
+
+确保你的 PostgreSQL 里有对应的数据库（例如 chatroom），你可以用命令行创建：
+
+```bash
+psql -U <用户名> -h <主机> -p <端口>
+CREATE DATABASE chatroom;
+```
+
+## 数据库迁移
+使用 Drizzle Kit 管理数据库迁移。
+
+1. 生成迁移文件（根据当前 schema 自动生成迁移）
+
+```bash
+yarn db:generate
+```
+
+2. 执行迁移，创建或更新数据库表
+
+```bash
+yarn db:migrate
+```
+
+3. （可选）启动 Drizzle Studio 可视化查看数据库结构
+
+```bash
+yarn db:studio
+```
+
+## 启动项目
+
+开发模式启动（支持热更新）：
+
+```bash
+yarn dev
+```
+
+生产模式构建并启动：
+
+```bash
+yarn build
+yarn start
+```
+
+## 项目结构（简要）
+- src/ 主要代码目录
+- src/server/db/schema.ts Drizzle ORM 的数据库 schema 定义
+- drizzle.config.ts Drizzle Kit 配置文件
+- package.json 依赖与脚本
+- .env 环境变量文件（不提交至仓库）
+
+
+## 备注
+此处 Node.js 版本使用20.x兼容依赖版本。

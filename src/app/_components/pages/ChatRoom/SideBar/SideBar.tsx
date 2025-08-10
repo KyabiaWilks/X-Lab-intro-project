@@ -29,7 +29,7 @@ const SideBar: React.FC = () => {
 
   return (
     <div className="sidebar">
-      <h2>My Sidebar</h2>
+      <h2> </h2>
       <ul>
         <li>
           <Link href="/setname" onClick={(e) => { e.preventDefault(); handleClick('/setname'); }}>
